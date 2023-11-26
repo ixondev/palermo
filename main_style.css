@@ -1,0 +1,204 @@
+* {
+    /* margin: 0px;
+    padding: 0px; */
+    box-sizing: border-box;
+    background-color: #3ac2d1;
+    font-family: 'Montserrat', sans-serif;
+}
+
+::selection {  /* Set colors for content selection */
+    color: #32dcdc;
+    background: none;
+}
+
+body { /* CHILDS: #header-banner-div, #main-div, #footer-div*/
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* min-height: 100px; */
+    height: 100%;
+}
+
+    body.grad1 {
+        /* background-color: #284B85; */
+        background: -webkit-linear-gradient(to right, #284b85, #073462);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #284b85, #073462); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    #main-div { /* CHILDS: #sidebar-div, #bodyarea-div, #form-div */
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        /* min-height: 400px; */
+        height: 100%;
+        /* justify-content: space-between; <-- apparently not necessary*/
+    }
+
+        #bodyarea-div {
+            display: flex;
+            flex-direction: row;
+            flex-basis: 85%;
+            /*background-color: #a2d3b8; just for contrasting during dev */
+            /* background-color: #ade0b5; */
+            padding-bottom: 20px;
+            
+        }
+
+            section.grade1 {
+                /* background: #ade0b5; */
+                /* padding-left: 100px;
+                padding-right: 0px;
+                padding-top: 0px; */
+                padding-bottom: 20px;
+                align-items: center;
+                justify-content: center;
+                width: auto;
+                height: max-content;
+            }
+
+                #tittle {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-weight: bold;
+                    padding-left: 50px;
+                    padding-top: 50px;
+                }
+
+                #tittles {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    font-weight: bold;
+                    padding-left: 50px;
+                    padding-top: 50px;
+                }
+
+                    #tittle1 {
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 110px;
+                        color: #2a85a5;
+                    }
+                    #tittle2 {
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 60px;
+                        color: #5777af;
+                        font-style: oblique;
+                    }
+                    #tittle3 {
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 90px;
+                        color: #84a9cf;
+                    }
+                    #tittle4 {
+                        font-family: Georgia, 'Times New Roman', Times, serif;
+                        font-size: 20px;
+                        color: #0c0c0c;
+                        font-style: oblique;
+                        text-align: right;
+                        padding-top: 15px;
+                    }
+
+        #footer-div {
+        /* display: flex; <-- inherited from body */
+        /* flex-direction: column; <-- inherited from body */
+        /* width: 100%; */
+        height: 100%;
+        /* min-height: 40px; */
+        align-items: center;
+        justify-content: center;
+        /* background-color: #0f366c; */
+        /* background-color: #284B85; */
+        /* background-color: #3e4b58; */
+        background-color: #073462;
+        /* THIS IS FOR ALIGNING THE DIV TO THE RIGHT  https://stackoverflow.com/a/12326152 */
+        margin-left: auto; 
+        margin-right: 0;
+        /* THIS IS FOR ROTATE THE TEXT */
+        -ms-writing-mode: tb-rl;
+        -webkit-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;
+        transform: rotate(360deg);
+        white-space: nowrap;
+        text-orientation:sideways;
+        }
+            footer {
+                /* text-align: left; */
+                padding-top: 50px;
+                padding-bottom: 50px;
+                /* padding-left: 50px; */
+            }
+
+                footer p {
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 12px;
+                    color: #ffffff;
+                    line-height: 12px;
+                }
+
+                logo {
+                    font-family: 'Raleway';
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+
+                    logo.gradient-text {
+                        /* Fallback: Set a background color. */
+                        /* background-color: white; */
+                        /* background-color: #284B85; */
+                        background-color: red;
+                        background-clip: text;
+
+                        /* Create the gradient. */
+                        background-image: linear-gradient(to right, #fcfcfc, #7ac2e7);
+                        /* background-image: linear-gradient(to right, #fcfcfc, #69ec99); */
+                        /* background-image: linear-gradient(to right, #fcfcfc, #284B85, #fcfcfc, #284B85); */
+                        /* background-image: linear-gradient(45deg, #f3ec78, #af4261); */
+
+                        /* Set the background size and repeat properties. */
+                        background-size: 100%;
+                        background-repeat: repeat;
+
+                        /* Use the text as a mask for the background. */
+                        /* This will show the gradient as a text color rather than element bg. */
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent; /* Chrome 10-25, Safari 5.1-6 */
+                        -moz-background-clip: text;
+                        -moz-text-fill-color: transparent;
+                        -o-background-clip: text;
+                        -o-text-fill-color: transparent;
+                        -ms-background-clip: text;
+                        -ms-text-fill-color: transparent;
+                    }
+
+                    img {
+                        padding: 0px;
+                        margin: 0px;
+                    }
+
+                        img.rotate {
+                            -webkit-transform: rotate(90deg);
+                            transform: rotate(90deg);
+                        }
+
+    #muestra {
+        display: flex;
+        flex-direction: row;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        color: #ffffff;
+        line-height: 12px;
+        padding-top: 30px;
+        padding-left: 50px;
+    }
+    
+        #muestra logo {
+            font-family: 'Raleway';
+            font-size: 50px;
+            font-weight: bold;
+            justify-content: left;
+        }
